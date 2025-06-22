@@ -1,0 +1,202 @@
+/* ====== Reset and Base ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #ff6565;
+  --text-color: #ffffff;
+  --background-color: #1d1d1d;
+  --font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* ====== Container ====== */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ====== Hero Section ====== */
+.hero {
+  background-image: url('images/headphones_hero_1.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.nav img.logo {
+  height: 30px;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-menu a {
+  color: var(--text-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.nav-menu a:hover,
+.nav-menu a:active {
+  color: var(--main-color);
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 15px 30px;
+  background-color: var(--main-color);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  transition: opacity 0.3s ease;
+}
+
+.btn:hover,
+.btn:active {
+  opacity: 0.9;
+}
+
+
+/* ================== WHAT WE DO =================== */
+
+.what-we-do {
+  background-color: #ffffff;
+  color: #000;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  max-width: 600px;
+  margin: 0 auto 60px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+}
+
+.service-card {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 48px;
+  color: #ff6565;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* ================ OUR RESULTS SECTION ================ */
+.our-results {
+  background-color: #f9f9f9;
+  color: #000;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.results-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.result-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid #ff6565;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff6565;
+  margin-bottom: 10px;
+}
+
+.result-circle p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .results-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .circle {
+    width: 120px;
+    height: 120px;
+    font-size: 1.2rem;
+  }
+}
